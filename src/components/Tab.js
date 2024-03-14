@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css'
 import CIcon from '@coreui/icons-react'
 import svgImage from '../../public/p.svg'
 import { prosp } from '../assets/brand/prosp'
+import birth from '../../public/b.svg'
 const CenteredTabs = () => {
   const [value, setValue] = React.useState(0)
   const [activeIndex, setActiveIndex] = React.useState(0)
@@ -16,12 +17,23 @@ const CenteredTabs = () => {
     <>
       <Tabs>
         <div className="classAssignmentTabsInner d-flex justify-content-center">
-          <TabList >
+          <TabList>
             <Tab>
               <img src={svgImage} alt="Home" />
               Prospect on Facebook
             </Tab>
-            <Tab>Title 2</Tab>
+            <Tab>
+              <img src={birth} alt="birthday" />
+              Wish Birthdays
+            </Tab>
+            <Tab>
+              <img src={birth} alt="birthday" />
+              Manage Requests
+            </Tab>
+            <Tab>
+              <img src={birth} alt="birthday" />
+              Instagram
+            </Tab>
           </TabList>
         </div>
 
