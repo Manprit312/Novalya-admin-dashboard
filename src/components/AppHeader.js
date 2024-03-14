@@ -14,20 +14,15 @@ import {
   CNavItem,
   useColorModes,
 } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import {
-  cilBell,
-  cilContrast,
-  cilEnvelopeOpen,
-  cilList,
-  cilMenu,
-  cilMoon,
-  cilSun,
-} from '@coreui/icons'
+// eslint-disable-next-line prettier/prettier
 
+import { BellIcon } from '../assets/brand/bellicon'
+import CIcon from '@coreui/icons-react'
+import { cilBell, cilContrast, cilList, cilMenu, cilMoon, cilSun } from '@coreui/icons'
+import { sidebartoggle } from '../assets/brand/sidebartoggle'
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
-
+import { message } from '../assets/brand/message'
 const AppHeader = () => {
   const headerRef = useRef()
   const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
@@ -45,56 +40,39 @@ const AppHeader = () => {
   return (
     <CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
       <CContainer className="border-bottom px-4" fluid>
-        <CHeaderToggler
-          onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
-          style={{ marginInlineStart: '-14px' }}
-        >
-          <CIcon icon={cilMenu} size="lg" />
+        <CHeaderToggler onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}>
+          {sidebarShow ? '' : <img src="/public/toggler.png" className="sidebartoggler" />}
         </CHeaderToggler>
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
-              Dashboard
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
+            <CNavLink href="#">Welcome back 👋 John</CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-auto">
+          <CDropdownToggle caret={false} className="d-none d-md-flex">
+            <img src="/public/theme.png" />
+          </CDropdownToggle>
+          <CDropdownToggle caret={false} className="d-none d-md-flex">
+            <img src="/public/country.png" />
+          </CDropdownToggle>
           <CNavItem>
             <CNavLink href="#">
-              <CIcon icon={cilBell} size="lg" />
+              <img src="/public/message.png" />
             </CNavLink>
           </CNavItem>
           <CNavItem>
+            <CNavLink href="#">
+              <img src="/public/bell.png" />
+            </CNavLink>
+          </CNavItem>
+          {/* <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilList} size="lg" />
             </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilEnvelopeOpen} size="lg" />
-            </CNavLink>
-          </CNavItem>
+          </CNavItem> */}
         </CHeaderNav>
         <CHeaderNav>
-          <li className="nav-item py-1">
-            <div className="vr h-100 mx-2 text-body text-opacity-75"></div>
-          </li>
           <CDropdown variant="nav-item" placement="bottom-end">
-            <CDropdownToggle caret={false}>
-              {colorMode === 'dark' ? (
-                <CIcon icon={cilMoon} size="lg" />
-              ) : colorMode === 'auto' ? (
-                <CIcon icon={cilContrast} size="lg" />
-              ) : (
-                <CIcon icon={cilSun} size="lg" />
-              )}
-            </CDropdownToggle>
             <CDropdownMenu>
               <CDropdownItem
                 active={colorMode === 'light'}
@@ -125,9 +103,6 @@ const AppHeader = () => {
               </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
-          <li className="nav-item py-1">
-            <div className="vr h-100 mx-2 text-body text-opacity-75"></div>
-          </li>
           <AppHeaderDropdown />
         </CHeaderNav>
       </CContainer>
