@@ -13,292 +13,107 @@ import {
   cilSpeedometer,
   cilStar,
 } from '@coreui/icons'
+import {dashboard} from './assets/brand/dashboard'
+import { crm } from './assets/brand/crm'
+import { nova } from './assets/brand/nova'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { prosp } from './assets/brand/prosp'
+import { ai } from './assets/brand/ai'
+import { library } from './assets/brand/library'
+import { affilia } from './assets/brand/affilia'
+import { up } from './assets/brand/upgrade'
+import { Profile } from './assets/brand/profile'
+import { logout } from './assets/brand/logout'
+
 
 const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    icon: <CIcon icon={dashboard} customClassName="nav-icon" fill="none" />,
     badge: {
-      color: 'info',
+      color: 'none',
       text: 'NEW',
     },
   },
   {
-    component: CNavTitle,
-    name: 'Theme',
-  },
-  {
     component: CNavItem,
-    name: 'Colors',
+    name: 'Prospection',
     to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    icon: <CIcon icon={prosp} customClassName="nav-icon"  />,
   },
   {
     component: CNavItem,
-    name: 'Typography',
+    name: 'CRM',
     to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    icon: <CIcon icon={crm} customClassName="nav-icon" />,
   },
   {
-    component: CNavTitle,
-    name: 'Components',
+    component: CNavItem,
+    name: 'Nova Data',
+    to: '/base',
+    icon: <CIcon icon={nova} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Comment AI',
+    to: '/base/accordian',
+    icon: <CIcon icon={ai} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
-    name: 'Base',
+    name: 'Library',
     to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    icon: <CIcon icon={library} customClassName="nav-icon"/>,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
+        name: 'Section',
+        to: '/base/breadcrum',
+      },
+      
+    ],
+     
+    
+  },
+  {
+    component: CNavGroup,
+    name: 'Affiliate',
+    to: '/buttons',
+    icon: <CIcon icon={affilia} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Section',
         to: '/base/accordion',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
+        name: 'Message',
         to: '/base/breadcrumbs',
       },
-      {
-        component: CNavItem,
-        name: 'Cards',
-        to: '/base/cards',
-      },
-      {
-        component: CNavItem,
-        name: 'Carousel',
-        to: '/base/carousels',
-      },
-      {
-        component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
-      },
-      {
-        component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
-      },
-      {
-        component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
-      },
-      {
-        component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
-      },
-      {
-        component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
-      },
-      {
-        component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
-      },
-      {
-        component: CNavItem,
-        name: 'Buttons groups',
-        to: '/buttons/button-groups',
-      },
-      {
-        component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Forms',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
-      },
-      {
-        component: CNavItem,
-        name: 'Select',
-        to: '/forms/select',
-      },
-      {
-        component: CNavItem,
-        name: 'Checks & Radios',
-        to: '/forms/checks-radios',
-      },
-      {
-        component: CNavItem,
-        name: 'Range',
-        to: '/forms/range',
-      },
-      {
-        component: CNavItem,
-        name: 'Input Group',
-        to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
-      },
     ],
   },
   {
     component: CNavItem,
-    name: 'Charts',
+    name: 'Upgrade',
     to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Flags',
-        to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        component: CNavItem,
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        component: CNavItem,
-        name: 'Modal',
-        to: '/notifications/modals',
-      },
-      {
-        component: CNavItem,
-        name: 'Toasts',
-        to: '/notifications/toasts',
-      },
-    ],
+    icon: <CIcon icon={up} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
+    name: 'Profile',
+    to: '/charts',
+    icon: <CIcon icon={Profile} customClassName="nav-icon" />,
   },
-  {
-    component: CNavTitle,
-    name: 'Extras',
-  },
-  {
-    component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Login',
-        to: '/login',
-      },
-      {
-        component: CNavItem,
-        name: 'Register',
-        to: '/register',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 404',
-        to: '/404',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
-      },
-    ],
-  },
+ 
+
   {
     component: CNavItem,
-    name: 'Docs',
+    name: 'Logout',
     href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    icon: <CIcon icon={logout} customClassName="nav-icon" />,
   },
 ]
 
