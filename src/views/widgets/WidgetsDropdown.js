@@ -10,6 +10,7 @@ import {
   CDropdownToggle,
   CWidgetStatsA,
 } from '@coreui/react'
+import CenteredTabs from '../../components/Tab'
 import { getStyle } from '@coreui/utils'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import CIcon from '@coreui/icons-react'
@@ -39,6 +40,7 @@ const WidgetsDropdown = (props) => {
 
   return (
     <CRow className={props.className} xs={{ gutter: 4 }}>
+      <CenteredTabs />
       <CCol sm={6} xl={4} xxl={3}>
         <CWidgetStatsA
           color="primary"
