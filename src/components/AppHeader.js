@@ -49,8 +49,8 @@ const AppHeader = () => {
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-auto">
-          <CDropdownToggle caret={false} className="d-none d-md-flex">
-            <img src="/public/theme.png" />
+          <CDropdownToggle caret={false}>
+            <img src="/public/theme.png" className="d-none d-md-flex" />
           </CDropdownToggle>
           <CDropdownToggle caret={false} className="d-none d-md-flex">
             <img src="/public/country.png" />
