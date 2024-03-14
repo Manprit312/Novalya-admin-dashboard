@@ -5,6 +5,8 @@ import CIcon from '@coreui/icons-react'
 import svgImage from '../../public/p.svg'
 import { prosp } from '../assets/brand/prosp'
 import birth from '../../public/b.svg'
+import manage from '../../public/manage.svg'
+import insta from '../../public/insta.svg'
 const CenteredTabs = () => {
   const [value, setValue] = React.useState(0)
   const [activeIndex, setActiveIndex] = React.useState(0)
@@ -27,22 +29,30 @@ const CenteredTabs = () => {
               Wish Birthdays
             </Tab>
             <Tab>
-              <img src={birth} alt="birthday" />
+              <img src={manage} alt="birthday" />
               Manage Requests
             </Tab>
             <Tab>
-              <img src={birth} alt="birthday" />
+              <img src={insta} alt="birthday" />
               Instagram
             </Tab>
           </TabList>
         </div>
-
+        {/* 
         <TabPanel>
           <h2>Any content 1</h2>
         </TabPanel>
         <TabPanel>
           <h2>Any content 2</h2>
         </TabPanel>
+
+        <TabPanel>
+          <h2>Any content 1</h2>
+        </TabPanel>
+
+        <TabPanel>
+          <h2>Any content 1</h2>
+        </TabPanel> */}
       </Tabs>
     </>
   )

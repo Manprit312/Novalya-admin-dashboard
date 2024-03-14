@@ -1,19 +1,30 @@
 // Here you can add other styles
-
+body{
+    // font-family: 'DM Sans';
+}
 .classAssignmentTabsInner .react-tabs__tab {
-    border-radius: 310px;
+    border-radius: 8px;
     width: 100%;
     bottom: 0;
     font-size: 14px;
     letter-spacing: 0.5px;
     padding: 10px 25px;
     color: #2E3447;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+.classAssignmentTabsInner .react-tabs__tab{
+    background-color: #5E3BB71A;
+    color: #fff;
+    border: none;
+}
 .classAssignmentTabsInner .react-tabs__tab-list {
+    background-color: white;
     text-align: center;
     border: 1px solid #C8C8C8;
-    border-radius: 310px;
+    border-radius: 10px;
     padding: 4px 5px;
     align-items: center;
     width: 100%;
@@ -28,7 +39,10 @@
     color: #fff;
     border: none;
 }
+.classAssignmentTabsInner .react-tabs__tab--selected img{
+    color: white!important;
+}
 
 .react-tabs__tab:focus:after{
-    background: none;
+    background: none!important;
 }
