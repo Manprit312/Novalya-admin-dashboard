@@ -20,7 +20,7 @@ import { BellIcon } from '../assets/brand/bellicon'
 import CIcon from '@coreui/icons-react'
 import { cilBell, cilContrast, cilList, cilMenu, cilMoon, cilSun } from '@coreui/icons'
 import { sidebartoggle } from '../assets/brand/sidebartoggle'
-import { AppBreadcrumb } from './index'
+
 import { AppHeaderDropdown } from './header/index'
 import { message } from '../assets/brand/message'
 const AppHeader = () => {
@@ -105,9 +105,6 @@ const AppHeader = () => {
           </CDropdown>
           <AppHeaderDropdown />
         </CHeaderNav>
-      </CContainer>
-      <CContainer className="px-4" fluid>
-        <AppBreadcrumb />
       </CContainer>
     </CHeader>
   )

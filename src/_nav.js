@@ -13,7 +13,7 @@ import {
   cilSpeedometer,
   cilStar,
 } from '@coreui/icons'
-import {dashboard} from './assets/brand/dashboard'
+import { dashboard } from './assets/brand/dashboard'
 import { crm } from './assets/brand/crm'
 import { nova } from './assets/brand/nova'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
@@ -25,23 +25,18 @@ import { up } from './assets/brand/upgrade'
 import { Profile } from './assets/brand/profile'
 import { logout } from './assets/brand/logout'
 
-
 const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
     icon: <CIcon icon={dashboard} customClassName="nav-icon" fill="none" />,
-    badge: {
-      color: 'none',
-      text: 'NEW',
-    },
   },
   {
     component: CNavItem,
     name: 'Prospection',
     to: '/theme/colors',
-    icon: <CIcon icon={prosp} customClassName="nav-icon"  />,
+    icon: <CIcon icon={prosp} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
@@ -65,17 +60,14 @@ const _nav = [
     component: CNavGroup,
     name: 'Library',
     to: '/base',
-    icon: <CIcon icon={library} customClassName="nav-icon"/>,
+    icon: <CIcon icon={library} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
         name: 'Section',
         to: '/base/breadcrum',
       },
-      
     ],
-     
-    
   },
   {
     component: CNavGroup,
@@ -107,7 +99,6 @@ const _nav = [
     to: '/charts',
     icon: <CIcon icon={Profile} customClassName="nav-icon" />,
   },
- 
 
   {
     component: CNavItem,
